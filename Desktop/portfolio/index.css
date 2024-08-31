@@ -1,0 +1,417 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f0f8ff;
+    /* Light blue background */
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 10px;
+    color: #1c2a48;
+    /* Darker blue for headings */
+}
+
+a {
+    color: #1e90ff;
+    /* Dodger blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #040f1a;
+    /* Dodger blue */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 2.5em;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #4682b4;
+    /* Steel blue on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* About Section */
+/* Black Footer */
+.black-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    /* Adjust height to cover the watermark */
+    background-color: #000;
+    /* Black color */
+    z-index: 3;
+}
+
+#about {
+    position: relative;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Galaxy Background */
+#about .bg {
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+#about .bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+/* Star Field */
+#about .star-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 600px;
+    z-index: -1;
+}
+
+#about .star-field .layer {
+    box-shadow:
+        -411px -476px #cccccc,
+        777px -407px #d4d4d4,
+        -387px -477px #fcfcfc,
+        -91px -235px #d4d4d4,
+        491px -460px #f7f7f7,
+        /* ... (additional stars omitted for brevity) */
+        -703px 375px #d6d6d6,
+        392px 520px #d9d9d9,
+        -492px -60px #c4c4c4,
+        759px 288px #ebebeb,
+        98px -412px #c4c4c4,
+        -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+}
+
+#about .star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 5s linear infinite;
+}
+
+#about .star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 5s linear infinite;
+}
+
+#about .star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 5s linear infinite;
+}
+
+/* Animations */
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateZ(-600px);
+        opacity: 0.5;
+    }
+}
+
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-1800px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateZ(-1200px);
+        opacity: 0.5;
+    }
+}
+/* Content Section */
+/* Content Section */
+#about .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 80px; /* Reduce gap between the two sections */
+    padding: 20px; /* Optional padding around the container */
+    height: 100%;
+    width: 60%;
+    align-items: center; /* Center content vertically within the grid cells */
+}
+
+/* Left Content */
+.about-content-left {
+    font-size: 5em;
+    text-align: right;
+    padding-left: 20px; /* Reduce padding to bring text closer */
+    font-family: 'Orbitron', sans-serif;
+    align-self: center; /* Align text vertically in the center of the grid cell */
+}
+
+/* Right Content */
+.about-content-right {
+    font-size: 1.2em;
+    text-align: left;
+    padding-right: 20px; /* Reduce padding to bring text closer */
+    font-family: 'Orbitron', sans-serif;
+    align-self: center; /* Align text vertically in the center of the grid cell */
+}
+
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1c2a48;
+}
+
+.project {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #b0c4de;
+    /* Light steel blue border */
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #1c2a48;
+}
+
+.project p {
+    margin-bottom: 10px;
+    color: #4b6e8c;
+}
+
+.project a {
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #e6f7ff;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1c2a48;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #1c2a48;
+    transition: background-color 0.3s ease;
+}
+
+#skills li:hover {
+    background-color: #d3eafc;
+    /* Light blue on hover */
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1c2a48;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1c2a48;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f0f8ff;
+}
+
+button[type="submit"] {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4682b4;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px 0;
+    background-color: #1c2a48;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #skills li {
+        display: block;
+        margin: 10px 0;
+    }
+}

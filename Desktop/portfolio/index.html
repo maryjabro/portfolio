@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Jabro | Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
         <nav>
-            <h1>Mary Jabro</h1>
-            <ul>
+            <div class="logo">Mary Jabro</div>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- About Section -->
+    <!-- About Section with Galaxy Background -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>Brief introduction about yourself, your background, and what you do.</p>
+        <div class="bg"></div>
+        <div class="star-field">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+        </div>
+        <div class="content">
+            <div class="about-content-left">
+                Mary<br>Jabro
+            </div>
+            <div class="about-content-right">
+                <p>Junior at Wayne State University and aspiring Developer.</p>
+            </div>
+        </div>
+        <!-- Black Footer to cover watermark -->
+        <footer class="black-footer"></footer>
     </section>
+    
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>Project Title</h3>
-            <p>Description of the project and the technologies used.</p>
+            <p>descriptions</p>
             <a href="link-to-project" target="_blank">View Project</a>
         </div>
         <!-- Repeat for additional projects -->
@@ -41,9 +67,9 @@
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
             <!-- Add more skills as needed -->
         </ul>
     </section>
@@ -54,13 +80,13 @@
         <form action="your-form-handler-url" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <button type="submit">Send</button>
         </form>
         <p>Or reach me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
@@ -68,10 +94,12 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Mary Jabro. All rights reserved.</p>
     </footer>
-    
-    <!-- Link to your JavaScript file -->
+
     <script src="scripts.js"></script>
 </body>
+
 </html>
+
+<style>
