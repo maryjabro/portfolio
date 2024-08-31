@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+font-family: 'Press Start 2P', cursive;
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -38,6 +41,7 @@ header {
     z-index: 1000;
     width: 100%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family:'Orbitron';
 }
 
 nav {
@@ -91,6 +95,8 @@ nav h1 {
     /* Black color */
     z-index: 3;
 }
+/* Typing Effect */
+
 
 #about {
     position: relative;
@@ -225,13 +231,28 @@ nav h1 {
 }
 
 /* Left Content */
+/* Left Content */
 .about-content-left {
     font-size: 5em;
     text-align: right;
     padding-left: 20px; /* Reduce padding to bring text closer */
     font-family: 'Orbitron', sans-serif;
     align-self: center; /* Align text vertically in the center of the grid cell */
+    transition: transform 0.3s ease-in-out, background-size 0.5s ease-in-out; /* Smooth transition for scaling and gradient */
+    background: linear-gradient(90deg, #fff, #fff); /* Default color as white */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 100%; /* Initial size of the gradient */
 }
+
+/* Hover Effect */
+.about-content-left:hover {
+    transform: scale(1.1); /* Optional: Slightly increases the size of the text */
+    background: linear-gradient(90deg, rgb(193, 193, 250), #f0f); /* Gradient colors on hover */
+    -webkit-background-clip: text;
+    background-size: 200% 200%; /* Gradually increases the size of the gradient */
+}
+
 
 /* Right Content */
 .about-content-right {
@@ -254,6 +275,48 @@ nav h1 {
     margin: 0 auto;
 }
 
+/* General Section Styles */
+#about-me {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #25116d, #5f397b); /* Default color as white */
+}
+
+#about-me h2 {
+    font-family: 'Orbitron', sans-serif; /* Or another cool font you prefer */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Container for photo and text */
+.about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between the image and text */
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Photo styling */
+.about-me-photo img {
+    border-radius: 50%; /* Makes the image a circle */
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Text styling */
+.about-me-text {
+    font-family:  sans-serif; /* Or another cool font you prefer */
+    font-size: 1.2em;
+    max-width: 600px; /* Limits the text width */
+    text-align: left;
+    color: #ffffff;
+}
 
 /* Projects Section */
 #projects {
