@@ -17,8 +17,17 @@ h3 {
     margin: 0 0 10px;
     color: #1c2a48;
     /* Darker blue for headings */
-}
+    font-family: 'Orbitron', sans-serif; /* Orbitron font for all headings */
 
+}
+h4{
+    font-family: 'Orbitron', sans-serif; /* Orbitron font for all headings */
+
+}
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sans-serif font for all paragraphs */
+}
 a {
     color: #1e90ff;
     /* Dodger blue links */
@@ -279,7 +288,7 @@ nav h1 {
 #about-me {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(90deg, #120833, #395d7b); /* Default color as white */
+    background: linear-gradient(90deg, #25116d, #5f397b); /* Default color as white */
 }
 
 #about-me h2 {
@@ -317,177 +326,76 @@ nav h1 {
     text-align: left;
     color: #ffffff;
 }
-
-/* General Section Styles */
-/* Import Orbitron font */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-/* Apply Orbitron to all headers */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
-}
-
-/* Apply sans-serif to all body text */
-body, p, .internship-info {
-    font-family: sans-serif;
-}
-
-/* Internship */
-/* General Section Styles */
-#internship {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-#internship h2 {
-    font-family: 'Orbitron', sans-serif; /* Or another cool font you prefer */
-    font-size: 2.5em;
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background: black;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
 }
 
-/* Internship Card */
-.internship-card {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-    gap: 20px; /* Space between the sections */
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Carousel Photos */
-.internship-photos {
-    width: 100%; /* Ensure the carousel spans the full width */
-    overflow: hidden; /* Hide overflow for carousel effect */
-    margin-bottom: 20px;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel img {
-    width: 100%; /* Ensure images fit the container */
-    border-radius: 10px;
-    display: block;
-}
-
-/* Internship Information */
-.internship-info {
-    width: 100%;
-    text-align: left;
-}
-
-.internship-info h3 {
+#projects h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Subtle glow for the heading */
 }
 
-.internship-info p {
-    font-family: sans-serif;
+.project {
+    background-color: rgba(20, 34, 55, 0.9); /* Darker transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.9); /* More dramatic lift and shadow on hover */
+    cursor:pointer;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Add glow to the project titles */
+}
+
+.project p {
     font-size: 1.2em;
-    color: #666;
+    color: #d9e8f5; /* Cool light blue for the text */
     line-height: 1.6;
 }
 
-/* Carousel Animation */
-@keyframes carousel {
-    0% { transform: translateX(0); }
-    17% { transform: translateX(-80%); }
-
-    33% { transform: translateX(-170%); }
-    50% { transform: translateX(-230%); }
-    66% { transform: translateX(-300%); }
-
-    88% { transform: translateX(-350%); }
-
-    100% { transform: translateX(0); }
+.project a {
+    color: #4fd1c5; /* Cyan-like color for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.carousel {
-    animation: carousel 20s infinite;
-}
-
-/* Projects Section */
-
-#projects {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-/* Container for title and project list */
-.projects-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px; /* Space between the title and the project list */
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Left Column - Projects Title */
-.projects-title {
-    flex: 1;
-    text-align: left;
-}
-
-.projects-title h2 {
-    font-family: 'Orbitron', sans-serif; /* Or another cool font you prefer */
-    font-size: 2.5em;
-    margin: 0;
-    color: #333;
-}
-
-/* Right Column - Projects List */
-.projects-list {
-    flex: 3;
-    max-height: 400px; /* Adjust the height to fit your design */
-    overflow-y: auto; /* Enables vertical scrolling */
-    padding-right: 20px;
-}
-
-.project-card {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-    margin: 0 0 10px;
-    font-family: 'Orbitron', sans-serif; /* Or another cool font you prefer */
-    font-size: 1.5em;
-    color: #333;
-}
-
-.project-card p {
-    margin: 0;
-    font-family:  sans-serif;
-    font-size: 1em;
-    color: #666;
+.project a:hover {
+    color: #9aeaff; /* Lighter blue on hover */
+    text-shadow: 0 0 5px #9aeaff; /* Glowing effect on hover */
 }
 
 
 /* Skills Section */
 #skills {
     padding: 60px 20px;
-    background-color: #e6f7ff;
+    background-color: #142850; /* Deep space-like background */
+    color: #ffffff;
     text-align: center;
 }
 
+
 #skills h2 {
-    font-size: 2em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #1c2a48;
+    color: #ffffff;
 }
 
 #skills ul {
@@ -495,33 +403,48 @@ body, p, .internship-info {
     padding: 0;
 }
 
+
 #skills li {
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px 20px;
     font-size: 1.2em;
     padding: 10px 20px;
-    border: 1px solid #b0c4de;
+    border: 1px solid #4682b4; /* Space blue border */
     border-radius: 5px;
-    background-color: #ffffff;
-    color: #1c2a48;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    color: #ffffff;
     transition: background-color 0.3s ease;
 }
 
 #skills li:hover {
-    background-color: #d3eafc;
-    /* Light blue on hover */
+    background-color: #d3eafc; /* Light blue hover effect */
+    color: #000000; /* Contrast for text */
 }
 
 /* Contact Section */
 #contact {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Gradient space theme */
+    color: #ffffff;
+    text-align: center;
 }
 
+#contact p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+#contact a {
+    color: #1e90ff;
+}
+#contact a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 #contact h2 {
-    font-size: 2em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #1c2a48;
+    color: #ffffff;
 }
 
 form {
@@ -592,4 +515,149 @@ footer {
         display: block;
         margin: 10px 0;
     }
+}
+/* Internship Section */
+#internship {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2a0845, #6441a5, #0f2027); /* Purple, black, space-themed gradient */
+    text-align: center;
+    color: #ffffff; /* White text to contrast with the dark background */
+}
+
+#internship h2 {
+    font-family: 'Orbitron', sans-serif; /* Space-like font */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.internship-description {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Adds depth with a darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-description:hover {
+    transform: translateY(-5px); /* Lifts the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Adds a more pronounced shadow on hover */
+}
+/* Carousel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto; /* Add margin for spacing */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
+    background-color: #1b263b; /* Dark background for space theme */
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Carousel Slides Container */
+.carousel-slides {
+    display: flex;
+    width: 300%; /* 100% for each slide */
+    animation: slideAnimation 20s infinite ease-in-out; /* Smoother and slower animation */
+}
+
+
+/* Keyframes for automatic sliding */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(-30%); } /* Shift to the second slide */
+    40% { transform: translateX(-50%); } /* Shift to the third slide */
+    50% { transform: translateX(-80%); } /* Shift to the third slide */
+
+    60% { transform: translateX(-100%); } /* Shift to the third slide */
+    80% { transform: translateX(-115%); } /* Shift to the third slide */
+
+    100% { transform: translateX(0%); }   /* Loop back to the first slide */
+}
+
+/* Optional: Smooth transitions for better effect */
+.carousel-slide {
+    transition: transform 1s ease-in-out;
+}
+
+
+
+/* Divider Styles */
+.divider {
+    height: 20px;
+    background: black;
+}
+
+
+/* Modal default state */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* Smooth fade-in/out */
+    opacity: 0;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #85888b;
+    padding: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    animation: slide-in 0.5s ease-out forwards;
+}
+.modal-content ul li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+/* Animation for modal opening */
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
 }
