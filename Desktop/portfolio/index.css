@@ -40,7 +40,7 @@ a:hover {
 
 /* Header and Navigation Bar */
 header {
-    background-color: #040f1a;
+    background-color: rgb(84, 84, 134);
     /* Dodger blue */
     color: #fff;
     padding: 15px 0;
@@ -89,6 +89,7 @@ nav h1 {
     background-color: #4682b4;
     /* Steel blue on hover */
     transition: background-color 0.3s ease;
+    text-decoration: none; 
 }
 
 /* About Section */
@@ -257,7 +258,7 @@ nav h1 {
 /* Hover Effect */
 .about-content-left:hover {
     transform: scale(1.1); /* Optional: Slightly increases the size of the text */
-    background: linear-gradient(90deg, rgb(193, 193, 250), #f0f); /* Gradient colors on hover */
+    background: linear-gradient(90deg, rgb(193, 193, 250), rgba(84, 84, 134, 0.761)); /* Gradient colors on hover */
     -webkit-background-clip: text;
     background-size: 200% 200%; /* Gradually increases the size of the gradient */
 }
@@ -288,14 +289,17 @@ nav h1 {
 #about-me {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(90deg, #25116d, #5f397b); /* Default color as white */
+    background: linear-gradient(90deg, rgba(84, 84, 134, 0.761), #e2dfe4); /* Default color as white */
+    border-radius: 30px;
+    margin: 20px;
 }
 
 #about-me h2 {
     font-family: 'Orbitron', sans-serif; /* Or another cool font you prefer */
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #000000;
+
 }
 
 /* Container for photo and text */
@@ -307,6 +311,7 @@ nav h1 {
     flex-wrap: wrap; /* Ensures content wraps on smaller screens */
     max-width: 1000px;
     margin: 0 auto;
+    
 }
 
 /* Photo styling */
@@ -324,50 +329,58 @@ nav h1 {
     font-size: 1.2em;
     max-width: 600px; /* Limits the text width */
     text-align: left;
-    color: #ffffff;
+    color: #000000;
 }
 /* Projects Section */
 #projects {
     padding: 60px 20px;
-    background: black;
+    background: #e7e0e000; /* Subtle space-themed gradient */
     color: #ffffff;
     text-align: center;
+    border-radius: 30px;
+    margin: 20px auto;
+    max-width: 1200px; /* Center and contain within a max width */
 }
 
 #projects h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffffff;
+    color:  rgba(84, 84, 134, 0.761); /* Dark transparent background */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Subtle glow for the heading */
+    letter-spacing: 1.5px; /* Adds some spacing between letters for style */
 }
 
 .project {
-    background-color: rgba(20, 34, 55, 0.9); /* Darker transparent background */
+    background-color: rgba(84, 84, 134, 0.761); /* Dark transparent background */
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 40px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1000px;
+    margin: 20px auto; /* Centers the project cards */
 }
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.9); /* More dramatic lift and shadow on hover */
-    cursor:pointer;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8); /* More dramatic lift and shadow on hover */
+    cursor: pointer;
 }
 
 .project h3 {
-    font-size: 1.8em;
-    color: #f1f1f1;
-    margin-bottom: 10px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Add glow to the project titles */
+    font-size: 2em; /* Slightly larger title for emphasis */
+    color: #f8f8f8;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* More glow on hover */
 }
 
 .project p {
     font-size: 1.2em;
-    color: #d9e8f5; /* Cool light blue for the text */
+    color: #d9e8f5; /* Light blue for the text */
     line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left; /* Align text for better readability */
 }
 
 .project a {
@@ -381,109 +394,133 @@ nav h1 {
     text-shadow: 0 0 5px #9aeaff; /* Glowing effect on hover */
 }
 
+@media (max-width: 768px) {
+    .project {
+        padding: 15px;
+    }
+    
+    #projects h2 {
+        font-size: 2em;
+    }
+}
 
 /* Skills Section */
 #skills {
     padding: 60px 20px;
-    background-color: #142850; /* Deep space-like background */
+    background-color: rgba(76, 76, 105, 0.761); /* Very deep navy blue for a sleek, minimal background */
     color: #ffffff;
     text-align: center;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Center and contain the section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
 }
-
 
 #skills h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #ffffff;
+    letter-spacing: 2px; /* Slight letter spacing for modern effect */
+    text-transform: uppercase; /* All caps for a bold, sleek heading */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Soft glow for heading */
 }
 
 #skills ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Add some space between skill items */
 }
-
 
 #skills li {
     display: inline-block;
-    margin: 10px 20px;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: 1px solid #4682b4; /* Space blue border */
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-    color: #ffffff;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    font-size: 1.1em; /* Slightly smaller font for minimal design */
+    padding: 12px 25px;
+    border: 1px solid #65278b;/* Subtle blue border */
+    border-radius: 50px; /* Rounded pill-shape for a modern look */
+    background-color: transparent; /* Minimal background */
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease;
 }
 
 #skills li:hover {
-    background-color: #d3eafc; /* Light blue hover effect */
-    color: #000000; /* Contrast for text */
+    background-color: #65278b; /* Blue background on hover */
+    color: #ffffff; /* Keep text white */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
 }
 
-/* Contact Section */
+/* Responsive design: stack skill items on smaller screens */
+@media (max-width: 768px) {
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills li {
+        margin: 10px 0;
+        padding: 12px 40px;
+    }
+}
+
 #contact {
-    padding: 60px 20px;
-    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Gradient space theme */
-    color: #ffffff;
-    text-align: center;
-}
-
-#contact p {
-    font-size: 1.2em;
-    color: #ffffff;
-}
-#contact a {
-    color: #1e90ff;
-}
-#contact a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-#contact h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-form {
+    background: linear-gradient(90deg, rgba(84, 84, 134, 0.761), #e2dfe4); /* Default color as white */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a sleek effect */
     max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #1c2a48;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
+    margin: 50px auto; /* Center the section */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #000000; /* Darker text color for contrast */
     margin-bottom: 20px;
-    border: 1px solid #b0c4de;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: #f0f8ff;
-}
+  }
+  
+  #contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000000; /* Medium-dark color for body text */
+  }
+  
+  #contact p strong {
+    color: #000; /* Darker text for labels */
+  }
+  
+  #contact a {
+    color: #0a2785; /* Light blue for links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #contact a:hover {
+    color: #007acc; /* Darker blue on hover */
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #contact {
+      padding: 20px;
+      margin: 30px auto;
+    }
+  
+    #contact h2 {
+      font-size: 1.8rem;
+    }
+  
+    #contact p {
+      font-size: 1rem;
+    }
+  }
+  
 
-button[type="submit"] {
-    background-color: #1e90ff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #4682b4;
-}
 
 /* Footer Section */
 footer {
@@ -491,6 +528,7 @@ footer {
     background-color: #1c2a48;
     color: #fff;
     text-align: center;
+    
 }
 
 /* Responsive Design */
@@ -519,9 +557,11 @@ footer {
 /* Internship Section */
 #internship {
     padding: 60px 20px;
-    background: linear-gradient(135deg, #2a0845, #6441a5, #0f2027); /* Purple, black, space-themed gradient */
+    background: rgba(231, 224, 224, 0.482); /* Subtle space-themed gradient */
     text-align: center;
     color: #ffffff; /* White text to contrast with the dark background */
+    border-radius: 30px;
+    margin: 20px;
 }
 
 #internship h2 {
@@ -529,24 +569,35 @@ footer {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #ffffff;
-    background: #ffffff;
+    background: #000000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .internship-description {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    background-color:rgba(84, 84, 134, 0.761); /* Slightly transparent white background */
     padding: 20px;
     border-radius: 10px;
     color: #ffffff;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Adds depth with a darker shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
+.internship-description h3{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Subtle glow for the heading */
+}
 .internship-description:hover {
     transform: translateY(-5px); /* Lifts the card on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Adds a more pronounced shadow on hover */
+}
+.intership h3{
+    background-color:white;
 }
 /* Carousel */
 .carousel {
@@ -660,4 +711,10 @@ footer {
 .modal.show {
     display: flex;
     opacity: 1;
+}
+.project-icon {
+    font-size: 2em;       /* Adjust size of the icon */
+    color: #000000;       /* Change the color of the icon */
+    margin-right: 10px;   /* Space between icon and project title */
+    vertical-align: middle; /* Align icon with the text */
 }
